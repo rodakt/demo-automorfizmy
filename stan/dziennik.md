@@ -18,3 +18,7 @@ Mamy zweryfikowane rozwiązanie stopnia 6 (czynniki trójkątne 2 i 3) oraz dwa 
 ## Iteracja 03 — plan
 
 Mamy zweryfikowane rozwiązanie stopnia 6 oraz zapisane ograniczenie dolne: tw. Junga–van der Kulka i multiplikatywność stopnia dają, że każdy automorfizm stopnia ≤ 5 leży w K1 ∪ K2; K1 wykluczono dowodem, K2 — obliczeniowo (Gröbner w iter01, potwierdzony niezależnie mod p i testem sensowności w iter02). Pytanie jest więc w praktyce rozstrzygnięte (stopień 6), ale dwa ogniwa są słabsze: wynik dla K2 nie ma sprawdzalnego certyfikatu, a kompletność kart cechowania i twierdzenie o stopniu słowa zredukowanego są opisane tylko szkicowo. Ostatnią iterację roboczą przeznaczamy na ich wzmocnienie: zadanie 1 tworzy certyfikaty przynależności do ideału (sprawdzane niezależnie w sympy) i staranny dowód kompletności kart; zadanie 2 pisze samodzielny dowód multiplikatywności stopnia z kontrolą obliczeniową; zadanie 3 dowodzi wyniku pobocznego, że nad R i C minimum wynosi 4, co pokazuje arytmetyczny charakter ograniczenia 6 nad Q. Nowych konstrukcji nie szukamy. Po tej iteracji planujemy zakończenie i raport.
+
+## Raport — wersja końcowa
+
+Przepisano sekcje Metoda, Przebieg i Wnioski oraz dodano streszczenie i bibliografię. Raport podaje stopień 6 jako zweryfikowany i minimalny nad Q (dowód częściowo komputerowy, oparty na cytowanym tw. Junga–van der Kulka) oraz minimum 4 nad R i C.

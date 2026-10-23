@@ -1,1 +1,54 @@
-% Sekcję uzupełnia agent-redaktor.
+\section{Wnioski i pytania otwarte}
+
+\begin{twierdzenie}[ZWERYFIKOWANE]
+Istnieje automorfizm wielomianowy $\Q^2$ stopnia~6 realizujący bijekcję $p_i\mapsto q_i$,
+mianowicie $F=\varphi_3\circ\varphi_2\circ\varphi_1$ z części Wyniki.
+\end{twierdzenie}
+
+\begin{twierdzenie}[UDOWODNIONE, przy cytowanym Tw.~\ref{tw:jvdk}; część $K_2$ wspomagana komputerowo]\label{tw:glowne}
+Każdy automorfizm wielomianowy $\Q^2$ o współczynnikach wymiernych realizujący tę bijekcję
+ma stopień $\ge6$. W konsekwencji najmniejszy stopień wynosi dokładnie~6.
+\end{twierdzenie}
+\begin{proof}
+Ze Stwierdzenia~\ref{st:redukcja} automorfizm stopnia $\le5$ leży w $K_1\cup K_2$.
+Rozwiązania w $K_1$ wykluczają Lemat~\ref{lem:K1} i rząd macierzy układu liniowego.
+Rozwiązania w $K_2$ dawałyby wymierny punkt jednej z czterech kart; trzy karty mają ideał
+jednostkowy (jawne certyfikaty), a czwarta zawiera wielomian $m(z)$ bez pierwiastków
+wymiernych. Certyfikaty sprawdzono niezależnie w Sage i sympy.
+\end{proof}
+
+\begin{uwaga}
+Dowód zależy od dwóch rzeczy. (1) Twierdzenia Junga--van der Kulka, które cytujemy bez
+dowodu; numeru twierdzenia w~\cite{vdEssen} nie potwierdzono. (2) Poprawności przepisania
+układu $K_2$ do skryptów. To drugie potwierdzają testy kontrolne opisane w części Metoda, ale
+nie jest ono sprawdzone formalnie. Pozostałe kroki (Tw.~\ref{tw:stopien}, cechowanie,
+Lemat~\ref{lem:K1}) mają zapisane dowody.
+\end{uwaga}
+
+\begin{stwierdzenie}[UDOWODNIONE przy Tw.~\ref{tw:jvdk}; ograniczenie górne OBLICZENIOWE]\label{st:R}
+Nad $\mathbb R$ i nad $\mathbb C$ najmniejszy stopień automorfizmu realizującego tę bijekcję
+wynosi~4.
+\end{stwierdzenie}
+\begin{proof}[Szkic]
+Automorfizm stopnia~4 o współczynnikach w $\Q(\sqrt{94})\subset\mathbb R$ sprawdzono
+dokładnie (dla obu osadzeń). Stopień 1 wyklucza argument z równoległobokiem, a stopnie 2 i 3
+--- Stwierdzenie~\ref{st:redukcja} (prawdziwe nad dowolnym ciałem) i Lemat~\ref{lem:K1}:
+rząd wymiernej macierzy nie zmienia się przy rozszerzeniu ciała.
+\end{proof}
+Różnica między $\Q$ (stopień 6) a $\mathbb R$ (stopień 4) ma więc charakter arytmetyczny:
+rozwiązania stopnia~4 istnieją, ale są zdefiniowane nad $\Q(\sqrt{94})$ i nad ciałem
+sześciennym, a nie nad~$\Q$.
+
+\subsection*{Pytania otwarte}
+\begin{enumerate}
+\item Formalna weryfikacja (np. w asystencie dowodzenia) przepisania układu $K_2$ i
+certyfikatów, tak by Tw.~\ref{tw:glowne} nie zależał od zaufania do skryptów.
+\item Ile jest (modulo naturalne cechowanie) automorfizmów stopnia 6 nad $\Q$ realizujących
+tę bijekcję i czy wszystkie mają czynniki stopni $(2,3)$ albo $(3,2)$? (HIPOTEZA: tak, bo
+słowa długości 3 mają stopień $\ge8$; nie badano.)
+\item Jak zachowuje się najmniejszy stopień dla typowych bijekcji 5 punktów nad $\Q$ ---
+czy ograniczenie $(m-1)^2=16$ jest kiedykolwiek osiągane, czy też zawsze wystarcza znacznie
+mniej?
+\item Czy istnieje ogólne kryterium arytmetyczne (np. przez punkty wymierne rozmaitości
+$K_2$) rozstrzygające, kiedy minimalny stopień nad $\Q$ jest większy niż nad $\mathbb R$?
+\end{enumerate}

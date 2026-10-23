@@ -1,2 +1,107 @@
 \section{Metoda}
-Opis metody pojawi się po pierwszej iteracji.
+
+\subsection{Organizacja pracy}
+Eksperyment przebiegał w trzech iteracjach roboczych (po trzy równoległe zadania) poprzedzonych
+etapem~0, w którym zapisano konstrukcję bazową stopnia $(m-1)^2=16$. Każde zgłoszone
+rozwiązanie sprawdzał niezależny weryfikator (dokładna arytmetyka nad $\Q$: warunki
+$F(p_i)=q_i$, istnienie wymiernej odwrotności wielomianowej, stopień). Obliczenia
+algebraiczne prowadzono w Sage (bazy Gröbnera przez Singular), kontrole niezależne w sympy.
+Wszystkie skrypty leżą w katalogach \texttt{praca/iterNN/zadK/skrypty/}.
+
+\subsection{Oznaczenia i narzędzia teoretyczne}
+Niech $A$ oznacza grupę automorfizmów afinicznych $\Q^2$, a
+$J=\{(x,y)\mapsto(\alpha x+f(y),\,\beta y+\gamma):\ \alpha\beta\neq0,\ f\in\Q[y]\}$ grupę
+de Jonquières; $B=A\cap J$, $\sigma=(y,x)$, $t=(x,\,y+x^2)$. Rozważamy klasy
+\[
+K_1=\{a\circ(x,\,y+f(x))\circ b:\ a,b\in A,\ f\in\Q[x]\},\qquad
+K_2=\{a_2\circ t\circ a_1\circ t\circ a_0:\ a_i\in A\}.
+\]
+
+\begin{twierdzenie}[Jung, van der Kulk; \emph{cytowane}]\label{tw:jvdk}
+Dla dowolnego ciała $k$ mamy $\Aut_k(k[x,y])=A*_B J$. W szczególności każdy $F\notin A$
+ma zapis zredukowany $F=a_0\circ j_1\circ a_1\circ\dots\circ j_k\circ a_k$, $k\ge1$,
+$j_i\in J\setminus A$, $a_i\in A\setminus J$ dla $0<i<k$.
+\end{twierdzenie}
+Twierdzenia tego nie dowodziliśmy; korzystamy z niego jako ze znanego wyniku
+\cite{vdEssen,vdKulk}.
+
+\begin{twierdzenie}[multiplikatywność stopnia; UDOWODNIONE]\label{tw:stopien}
+Dla słowa zredukowanego jak wyżej (nad dowolnym ciałem) $\deg F=\prod_{i=1}^k\deg j_i$.
+\end{twierdzenie}
+\begin{proof}[Szkic dowodu]
+Pełny dowód zapisano w iteracji~03 (\texttt{praca/iter03/zad2/notatki.md}); jest to wersja
+argumentu Friedlanda--Milnora~\cite{FM}. Indukcją malejącą pokazuje się, że dla
+$H=j_i\circ a_i\circ\dots\circ j_k\circ a_k$ pierwsza składowa ma stopień
+$d_i=\prod_{l\ge i}\deg j_l$, a druga stopień ściśle mniejszy. W kroku indukcyjnym druga
+współrzędna $a_{i-1}$ zależy od $x$ (to dokładnie warunek $a_{i-1}\notin J$), więc
+$a_{i-1}\circ H$ ma drugą składową stopnia $d_i$; podstawienie do $\alpha X+f(Y)$, $\deg f=e\ge2$,
+daje wyraz wiodący stopnia $e\,d_i$, który nie może się skrócić, bo jest jedynym
+składnikiem tego stopnia. Korzysta się tylko z tego, że $k[x,y]$ jest dziedziną. Wynik
+skontrolowano obliczeniowo na 53 losowych słowach zredukowanych (OBLICZENIOWE).
+\end{proof}
+
+\begin{stwierdzenie}[UDOWODNIONE, przy Tw.~\ref{tw:jvdk}]\label{st:redukcja}
+Jeśli $F\in\Aut(\Q^2)$ i $\deg F\le5$, to $F\in K_1\cup K_2$; przy tym $\deg F\in\{1,2,3,5\}$
+implikuje $F\in K_1$, a $\deg F=4$ implikuje $F\in K_1\cup K_2$.
+\end{stwierdzenie}
+\begin{proof}
+Dla $F\in A$ mamy $F\in K_1$ ($f=0$). W przeciwnym razie z Tw.~\ref{tw:stopien} i
+$\deg j_i\ge2$ otrzymujemy $2^k\le5$, więc $k\le2$, a przy $k=2$ oba czynniki mają stopień~2.
+Każde $j\in J$ ma postać $d_1\circ(x+g(y),y)\circ d_2=d_1\sigma\circ(x,y+g(x))\circ\sigma d_2$
+z $d_i\in A$, $\deg g=\deg j$, więc $k=1$ daje $F\in K_1$. Gdy $\deg g=2$, po dopełnieniu
+do kwadratu i przeskalowaniu $(x,y+g(x))=d_1'\circ t\circ d_2'$, więc $k=2$ daje
+$F\in K_2$. Wszystkie użyte odwzorowania afiniczne mają współczynniki wymierne
+(\texttt{praca/iter02/zad1/notatki.md}).
+\end{proof}
+
+\begin{lemat}[UDOWODNIONE]\label{lem:K1}
+Jeśli $F\in K_1$ (nad dowolnym ciałem $k\supseteq\Q$) i $F(p_i)=q_i$, to istnieją niestałe
+funkcjonały afiniczne $L,L'$ z $L(p_i)=L'(q_i)$ dla $i=1,\dots,5$.
+\end{lemat}
+\begin{proof}
+Dla $F=a\circ(x,y+f(x))\circ b$ pierwsza współrzędna $a^{-1}\circ F$ równa się pierwszej
+współrzędnej $b$. Wystarczy wziąć $L=b_1$, $L'=(a^{-1})_1$.
+\end{proof}
+
+\subsection{Metody obliczeniowe}
+\paragraph{Klasa $K_1$.} Warunek z Lematu~\ref{lem:K1} to układ 5 równań liniowych
+jednorodnych w 6 niewiadomych (współczynniki $L,L'$). Macierz ma współczynniki wymierne
+i rząd 5, jej jądro jest rozpięte przez $(0,0,1,0,0,1)$, co odpowiada stałym $L=L'$.
+Rachunek dokładny w sympy wykonano dwukrotnie, niezależnie
+(\texttt{iter01/zad1/skrypty/k1.py}, \texttt{iter02/zad1/skrypty/lemat\_K1.py}).
+
+\paragraph{Klasa $K_2$: cechowanie.} Grupa $B'=\{(cx+e,\,c^2y+lx+f)\}$ spełnia
+$t\circ\beta=\beta'\circ t$ dla $\beta,\beta'\in B'$, a każde afiniczne odwzorowanie wymierne ma
+postać $\beta\circ r$ z $\beta\in B'$ i $r$ jednym z reprezentantów $(x+sy,\,ky)$ (karta~0) lub
+$(y,\,kx)$ (karta~1). Zatem rozwiązanie wymierne w $K_2$ daje wymierny punkt jednego z czterech
+układów $t\circ a_1''\circ t\circ r_0(p_i)=r_2(q_i)$ w niewiadomych
+$s,k,S,K,a,\dots,f$ oraz $z$ z warunkiem $z\,kK(ad-bc)=1$ (dowód kompletności:
+\texttt{iter03/zad1/notatki.md}, UDOWODNIONE).
+
+\paragraph{Klasa $K_2$: rozwiązanie układów.} Bazy Gröbnera nad $\Q$ w Sage
+(\texttt{iter01/zad2/skrypty/k2.sage}): dla kart $(0,1),(1,0),(1,1)$ ideał jest jednostkowy;
+dla karty $(0,0)$ ideał jest zerowymiarowy stopnia~5. W iteracji~03 wygenerowano
+\emph{certyfikaty}: dla trzech kart jawne $h_j$ z $1=\sum h_jg_j$, dla karty $(0,0)$ zapis
+wielomianu eliminacyjnego
+\[
+m(z)=\tfrac{1}{80823742548148224}\,(535274496z^2-1533993920z+1)\,
+(150994944z^3-143066112z^2-4457408z-59049)
+\]
+jako kombinacji generatorów. Równości te sprawdzono niezależnie w sympy
+(\texttt{iter03/zad1/skrypty/sprawdz\_cert.py}). Brak wymiernych pierwiastków $m$
+sprawdzono wprost: wyróżnik czynnika kwadratowego nie jest kwadratem, a dla czynnika
+sześciennego przejrzano wszystkich 650 kandydatów $\pm p/q$.
+
+\paragraph{Kontrole niezależne.} (a) Pełna enumeracja reprezentantów nad $\mathbb F_p$,
+$p=7,\dots,41$, z wyznaczaniem $a_1$ eliminacją Gaussa (bez baz Gröbnera): liczby rozwiązań
+pokrywają się z liczbami pierwiastków eliminantu mod $p$; dla $p=7$ i $p=41$ rozwiązań brak.
+(b) Test kontrolny: dla danych $q_i=G(p_i)$ z wymiernym $G\in K_2$ te same skrypty znajdują
+rozwiązanie. (c) Pięć rozwiązań nad $\overline{\Q}$ przekształcono w jawne automorfizmy i
+sprawdzono dokładnie w ciałach liczbowych, że $F(p_i)=q_i$, $F\circ G=G\circ F=\mathrm{id}$
+i $\deg F=4$.
+
+\paragraph{Konstrukcja górna.} Szukano słów $L^{-1}\circ(x+g(y),y)\circ(x,y+f(x))$:
+punkty kwadratu mają parami wspólne współrzędne $x$, więc $f$ stopnia~2 wystarcza do
+ustawienia ich w pożądanej konfiguracji; odwzorowanie afiniczne $L$ dobrano z warunków
+liniowych tak, by $g$ interpolował 4 wartości (stopień~3). Stopień wyniku to $2\cdot3=6$
+(\texttt{iter01/zad3/skrypty/deg6.py}).

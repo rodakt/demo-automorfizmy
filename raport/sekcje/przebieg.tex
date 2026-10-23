@@ -1,1 +1,38 @@
-% Sekcję uzupełnia agent-redaktor.
+\section{Przebieg eksperymentu}
+
+\paragraph{Etap 0.} Zapisano konstrukcję bazową: złożenie dwóch odwzorowań trójkątnych
+stopnia~4 z interpolacji Lagrange'a (stopień 16, ZWERYFIKOWANE).
+
+\paragraph{Iteracja 01.} Plan: rozstrzygnąć klasy odpowiadające stopniom $\le5$ i równolegle
+zabezpieczyć ograniczenie górne.
+\begin{itemize}
+\item Zad.~1: brak rozwiązania afinicznego (równoległobok $p_1+p_3=p_2+p_4$, podczas gdy
+$q_1+q_3-q_2-q_4=(-1,-3)\neq0$; UDOWODNIONE) i pustość klasy $K_1$ (OBLICZENIOWE: rząd~5).
+\item Zad.~2: baza Gröbnera dla $K_2$ --- brak punktów wymiernych, 5 punktów nad $\overline\Q$
+(dwa nad $\Q(\sqrt{94})$, trzy nad ciałem sześciennym; OBLICZENIOWE).
+\item Zad.~3: rozwiązanie stopnia~6 (czynniki trójkątne stopni 2 i 3), przyjęte przez
+weryfikator (ZWERYFIKOWANE). W wąskiej rodzinie użytej do konstrukcji stopień~4 okazał się
+nieosiągalny; nie jest to ograniczenie dolne.
+\end{itemize}
+
+\paragraph{Iteracja 02.} Plan: domknąć ograniczenie dolne i niezależnie potwierdzić wynik
+dla $K_2$.
+\begin{itemize}
+\item Zad.~1: zapis redukcji $\deg F\le5\Rightarrow F\in K_1\cup K_2$
+(Stwierdzenie~\ref{st:redukcja}) i niezależne sprawdzenie lematu $K_1$.
+\item Zad.~2: enumeracja modularna (opisana w części Metoda) --- zgodna z iteracją 01.
+\item Zad.~3: test sensowności --- rozwiązania nad ciałami liczbowymi są prawdziwymi
+automorfizmami stopnia~4, co potwierdza poprawność kodowania układu.
+\end{itemize}
+
+\paragraph{Iteracja 03.} Plan: wzmocnić najsłabsze ogniwa, bez szukania nowych konstrukcji.
+\begin{itemize}
+\item Zad.~1: dowód kompletności cechowania i certyfikaty przynależności do ideału,
+sprawdzone w sympy. Dla karty $(0,0)$ sympy potwierdził certyfikat dla $m(z)$ (wystarczający
+do wniosku); pozostałe elementy bazy leksykograficznej sprawdzono tylko w Sage.
+\item Zad.~2: pełny dowód Tw.~\ref{tw:stopien} z kontrolą obliczeniową.
+\item Zad.~3: wynik poboczny nad $\mathbb R$ i $\mathbb C$ (Stwierdzenie~\ref{st:R}).
+\end{itemize}
+
+Najniższy zweryfikowany stopień (6) uzyskano już w iteracji 01; dalsze iteracje
+poświęcono ograniczeniu dolnemu. Zestawienie czasu i kosztów zawiera dodatek.
