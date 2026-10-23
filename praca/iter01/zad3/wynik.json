@@ -1,0 +1,7 @@
+{"status": "rozwiazanie",
+ "podsumowanie": "Znaleziono automorfizm stopnia 6 (rozwiazanie_6.json, przyjęty przez lokalny weryfikator): F = L^{-1} ∘ (x+g(y),y) ∘ (x,y+f(x)) z deg f = 2, deg g = 3. Wykorzystano to, że punkty kwadratu mają parami wspólne x, a afiniczne L dobrano z warunków liniowych tak, by f i g interpolowały odpowiednio 3 i 4 wartości. W tej samej wąskiej rodzinie nie da się zejść do stopnia 4 (warunek sprzeczny). Nie jest to ograniczenie dolne.",
+ "najlepszy_stopien": 6,
+ "twierdzenia": [
+  {"tresc": "Istnieje automorfizm wielomianowy stopnia 6 nad Q realizujący zadaną bijekcję (rozwiazanie_6.json).", "etykieta": "OBLICZENIOWE", "uzasadnienie": "Lokalny weryfikator: ok=true, stopien=6, stopnie czynników [2,3]. Etykietę ZWERYFIKOWANE nadaje weryfikator zarządcy.", "pliki": ["skrypty/deg6.py", "rozwiazanie_6.json"]},
+  {"tresc": "W rodzinie F = L^{-1} ∘ (x+g(y),y) ∘ (x,y+f(x)) (bez afinicznego czynnika na początku), w której f jest spójne na parach A~D, B~C (wspólne x) i g spójne na parze D~E (wspólne y po L), nie da się uzyskać deg g <= 2.", "etykieta": "UDOWODNIONE", "uzasadnienie": "Warunki zgodności wymuszają drugi wiersz M = (3,-1) i a+3b=-3; trzecia różnica dzielona wartości g wynosi -(a+3b)/96 - 1/48 = 1/96 != 0. Dotyczy wyłącznie tej rodziny, nie jest ograniczeniem dolnym.", "pliki": ["skrypty/deg4.py"]}
+ ]}

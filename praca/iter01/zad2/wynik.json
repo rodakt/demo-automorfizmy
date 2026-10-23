@@ -1,0 +1,31 @@
+{
+ "status": "wynik_negatywny",
+ "podsumowanie": "W klasie K2 = {a2∘t∘a1∘t∘a0}, t=(x,y+x^2), a_i afiniczne, nie ma odwzorowania p_i→q_i z wymiernymi współczynnikami. Po cechowaniu (grupa B={(cx+e,c^2y+lx+f)} normalizowana przez t) układ ma dokładnie 5 rozwiązań nad Q̄, a eliminant (15s^2+38s-1)(3s^3+39s^2+29s+9) nie ma pierwiastków wymiernych. Trzy rozwiązania są rzeczywiste (dwa nad Q(√94), jedno nad ciałem stopnia 3), więc nad R taki automorfizm stopnia ≤4 istnieje, nad Q nie.",
+ "najlepszy_stopien": null,
+ "twierdzenia": [
+  {
+   "tresc": "Nie istnieje automorfizm postaci a2∘T2∘a1∘T1∘a0 (a_i afiniczne nad Q, T1,T2 trójkątne stopnia 2 nad Q) realizujący p_i→q_i z zadanie.json.",
+   "etykieta": "OBLICZENIOWE",
+   "uzasadnienie": "Redukcja do t=(x,y+x^2) i cechowanie a0,a2^{-1} do reprezentantów B\\Aff (dowód w notatkach); baza Gröbnera nad Q w Sage: 3 z 4 kart dają ideał (1), karta (0,0) ideał zerowymiarowy stopnia 5 bez punktów wymiernych. Test kontrolny (k2_test_kontrolny.sage): dla q_i=F(p_i), F∈K2 wymierne, układ znajduje punkt wymierny.",
+   "pliki": [
+    "skrypty/k2.sage",
+    "skrypty/k2_szczegoly.sage",
+    "skrypty/k2_test_kontrolny.sage"
+   ]
+  },
+  {
+   "tresc": "Nad Q̄ istnieje dokładnie 5 takich złożeń (modulo cechowanie), w tym 3 rzeczywiste; ciała definicji: Q(√94) (2 rozwiązania) i ciało kubiczne z 3s^3+39s^2+29s+9 (3 rozwiązania).",
+   "etykieta": "OBLICZENIOWE",
+   "uzasadnienie": "Baza leksykograficzna: wszystkie zmienne wielomianami od s, eliminant (15s^2+38s-1)(3s^3+39s^2+29s+9), oba czynniki nierozkładalne; vdim=5.",
+   "pliki": [
+    "skrypty/k2_szczegoly.sage"
+   ]
+  },
+  {
+   "tresc": "W połączeniu z wykluczeniem klasy 'jedno trójkątne stopnia ≤4 między afinicznymi' (inne zadanie) i tw. Junga–van der Kulka daje to: każdy automorfizm realizujący bijekcję ma stopień ≥5.",
+   "etykieta": "HIPOTEZA",
+   "uzasadnienie": "Zależy od wyniku innego zadania i od starannego zapisu argumentu JvdK (stopień słowa zredukowanego = iloczyn stopni czynników trójkątnych).",
+   "pliki": []
+  }
+ ]
+}

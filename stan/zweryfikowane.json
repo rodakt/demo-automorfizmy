@@ -1,11 +1,31 @@
 {
  "m": 5,
  "ograniczenie_znane": 16,
- "najlepszy_stopien": 16,
- "najlepszy_plik": "praca/iter00/baza/rozwiazanie_bazowe.json",
- "liczba_zaakceptowanych": 1,
+ "najlepszy_stopien": 6,
+ "najlepszy_plik": "praca/iter01/zad3/rozwiazanie_6.json",
+ "liczba_zaakceptowanych": 2,
  "liczba_odrzuconych": 0,
  "rozwiazania": [
+  {
+   "plik": "praca/iter01/zad3/rozwiazanie_6.json",
+   "ok": true,
+   "stopien": 6,
+   "bledy": [],
+   "autor": "iter01/zad3",
+   "opis": "T1=(x,y+f(x)) z f st. 2 (punkty kwadratu parami o wspólnym x), T2=(x+g(y),y) z g st. 3 (D,E mają wspólne y po zmianie afinicznej), następnie afiniczne; stopień 2*3=6",
+   "stopnie_czynnikow": [
+    2,
+    3
+   ],
+   "F": [
+    "-16*x**6/243 + 2*x**5/9 - 2*x**4*y/27 + 79*x**4/324 + x**3*y/6 - 293*x**3/288 - x**2*y**2/36 + 239*x**2*y/864 + 493*x**2/648 + x*y**2/32 - 5*x*y/12 - 35*x/72 - y**3/288 + 5*y**2/72 + 11*y/216 - 355/486",
+    "-16*x**6/81 + 2*x**5/3 - 2*x**4*y/9 + 79*x**4/108 + x**3*y/2 - 293*x**3/96 - x**2*y**2/12 + 239*x**2*y/288 - 83*x**2/216 + 3*x*y**2/32 - 5*x*y/4 + 37*x/24 - y**3/96 + 5*y**2/24 - 61*y/72 + 77/162"
+   ],
+   "liczba_wyrazow": 32,
+   "czas_weryfikacji_s": 0.05,
+   "sha256": "8f1e92b3542478003ac262d7f2ebb3a28d09fd0612f0070ca4c543efe2bad763",
+   "zauwazono": "09:34:45"
+  },
   {
    "plik": "praca/iter00/baza/rozwiazanie_bazowe.json",
    "ok": true,

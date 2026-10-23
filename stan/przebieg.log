@@ -2,3 +2,16 @@
 OK  praca/iter00/baza/rozwiazanie_bazowe.json stopień=16 
 Zaakceptowane: 1, odrzucone: 0, najlepszy stopień: 16
 [09:30:35] najlepszy zweryfikowany stopień: 16
+[09:30:46] == iteracja 01: planowanie
+[09:32:32] agent iter01_planista zakończony (kod 0, koszt 0.455571 USD)
+[09:32:33] == iteracja 01: 3 wykonawców po 12 min
+[09:32:33] start iter01_zad1: Dolne ograniczenia: stopień 1 i klasa 'afiniczne∘jedno trójkątne∘afiniczne'
+[09:32:33] start iter01_zad2: Stopień 4: rozstrzygnięcie złożeń dwóch trójkątnych stopnia 2 (Gröbner w Sage)
+[09:32:33] start iter01_zad3: Konstrukcja: szybkie rozwiązanie stopnia istotnie poniżej 16 (cel 6–9)
+[09:33:48] agent iter01_zad1 zakończony (kod 0, koszt 0.32345519999999994 USD)
+[09:34:44] agent iter01_zad2 zakończony (kod 0, koszt 0.45662899999999995 USD)
+[09:34:44] agent iter01_zad3 zakończony (kod 0, koszt 0.3842222 USD)
+[09:34:44] == iteracja 01: weryfikacja
+OK  praca/iter01/zad3/rozwiazanie_6.json stopień=6 
+Zaakceptowane: 2, odrzucone: 0, najlepszy stopień: 6
+[09:34:45] najlepszy zweryfikowany stopień: 6

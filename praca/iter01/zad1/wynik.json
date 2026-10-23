@@ -1,0 +1,8 @@
+{"status":"wynik_negatywny",
+ "podsumowanie":"Udowodniono brak automorfizmu afinicznego (relacja równoległoboku p1+p3=p2+p4 nie przechodzi na q). Klasa K1 = afiniczne∘jedno trójkątne (dowolnego stopnia)∘afiniczne jest pusta: wymagałaby niestałych funkcjonałów afinicznych L, L' z L(p_i)=L'(q_i), a układ liniowy ma tylko rozwiązania stałe (rząd 5). Z twierdzenia Junga–van der Kulka wynika, że żaden automorfizm stopnia 1 ani pierwszego nie realizuje bijekcji, więc stopień ≥ 4. Stopnie złożone (4, 6, 8, 9, ...) nie są tu rozstrzygnięte.",
+ "najlepszy_stopien":null,
+ "twierdzenia":[
+  {"tresc":"Nie istnieje automorfizm stopnia 1 (afiniczny) realizujący bijekcję.","etykieta":"UDOWODNIONE","uzasadnienie":"Afiniczne F zachowuje równość sum par: p1+p3=p2+p4=(0,0), a q1+q3=(0,0)≠(1,3)=q2+q4.","pliki":["skrypty/k1.py"]},
+  {"tresc":"Klasa K1={a∘(x,y+f(x))∘b: a,b afiniczne nad Q, f∈Q[x] dowolne} (i jej sprzężenie przez zamianę zmiennych) nie zawiera rozwiązania.","etykieta":"OBLICZENIOWE","uzasadnienie":"Lemat (udowodniony): F∈K1 ⇒ istnieją niestałe afiniczne L,L' z L(p_i)=L'(q_i). Układ 5 równań w 6 niewiadomych ma rząd 5, jądro=(0,0,1,0,0,1) (tylko stałe). Rachunek dokładny w sympy.","pliki":["skrypty/k1.py"]},
+  {"tresc":"Żaden automorfizm stopnia 1 ani stopnia będącego liczbą pierwszą nie realizuje bijekcji; zatem stopień każdego rozwiązania ≥ 4.","etykieta":"UDOWODNIONE","uzasadnienie":"Przy założeniu cytowanego twierdzenia Junga–van der Kulka (deg = iloczyn stopni czynników trójkątnych zredukowanego słowa; van den Essen 2000, rozdz. 5): stopień pierwszy ⇒ jeden czynnik trójkątny ⇒ F∈K1, sprzeczność z wynikiem OBLICZENIOWYM powyżej. Stopnie złożone (4,6,8,9,...) nie są wykluczone.","pliki":["skrypty/k1.py"]}
+ ]}
