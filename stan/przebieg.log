@@ -15,3 +15,15 @@ Zaakceptowane: 1, odrzucone: 0, najlepszy stopień: 16
 OK  praca/iter01/zad3/rozwiazanie_6.json stopień=6 
 Zaakceptowane: 2, odrzucone: 0, najlepszy stopień: 6
 [09:34:45] najlepszy zweryfikowany stopień: 6
+[09:34:53] == iteracja 02: planowanie
+[09:36:18] agent iter02_planista zakończony (kod 0, koszt 0.4133264 USD)
+[09:36:18] == iteracja 02: 3 wykonawców po 12 min
+[09:36:18] start iter02_zad1: Dowód ograniczenia dolnego deg ≥ 6: redukcja przez Junga–van der Kulka do K1 ∪ K2
+[09:36:18] start iter02_zad2: Niezależne potwierdzenie braku wymiernych złożeń dwóch trójkątnych stopnia 2
+[09:36:18] start iter02_zad3: Test sensowności: jawne rzeczywiste automorfizmy stopnia 4 nad Q(√94)
+[09:38:17] agent iter02_zad1 zakończony (kod 0, koszt 0.47632399999999997 USD)
+[09:43:50] agent iter02_zad2 zakończony (kod 0, koszt 0.6391776 USD)
+[09:43:50] agent iter02_zad3 zakończony (kod 0, koszt 0.4849072 USD)
+[09:43:50] == iteracja 02: weryfikacja
+Zaakceptowane: 2, odrzucone: 0, najlepszy stopień: 6
+[09:43:51] najlepszy zweryfikowany stopień: 6

@@ -1,0 +1,8 @@
+{"status":"wynik_negatywny",
+"podsumowanie":"Niezależna metoda (pełna enumeracja nad F_p reprezentantów warstw B\\Aff dla a0 i a2^{-1} oraz wyznaczanie a1 eliminacją Gaussa, bez baz Gröbnera) daje liczby rozwiązań N_p równe liczbie pierwiastków mod p eliminantu z iter01 (15s^2+38s-1)(3s^3+39s^2+29s+9) dla wszystkich p=7..41. Dla p=7 i p=41 nie ma rozwiązań nawet nad F_p. Test kontrolny (q_i=G(p_i), G∈K2 całkowite) daje N_p≥1. Potwierdza to wynik iter01: 5 rozwiązań nad Q̄, żadnego nad Q, w klasie K2 = {a2∘t∘a1∘t∘a0}.",
+"najlepszy_stopien":null,
+"twierdzenia":[
+{"tresc":"W klasie K2 (złożenia dwóch odwzorowań trójkątnych stopnia 2 z afinicznymi nad Q) liczba rozwiązań nad F_p (modulo cechowanie grupą B) wynosi 0,1,4,2,1,3,3,4,1,0 dla p=7,11,13,17,19,23,29,31,37,41 i pokrywa się z liczbą pierwiastków mod p eliminantu z iter01.","etykieta":"OBLICZENIOWE","uzasadnienie":"Pełne przeszukanie skończonego zbioru reprezentantów, algebra liniowa mod p; porównanie z f mod p w Sage.","pliki":["skrypty/modp_enum.py","skrypty/eliminant_modp.sage"]},
+{"tresc":"Brak rozwiązań nad F_7 i F_41 jest silnym (heurystycznym, nie dowodowym) argumentem za brakiem rozwiązań wymiernych; razem z niezależną zgodnością liczb N_p potwierdza wynik iter01 (brak wymiernego F∈K2).","etykieta":"HIPOTEZA","uzasadnienie":"Rozwiązanie wymierne redukowałoby się mod p dla prawie wszystkich p; nie wyklucza to formalnie złej redukcji przy p=7, 41 — formalnym rozstrzygnięciem pozostaje Gröbner z iter01.","pliki":["skrypty/modp_enum.py"]},
+{"tresc":"Test kontrolny: dla q_i=G(p_i) z G∈K2 o całkowitych współczynnikach enumeracja znajduje rozwiązania dla p=7..23.","etykieta":"OBLICZENIOWE","uzasadnienie":"tmp/kontrola.txt","pliki":["skrypty/kontrola.py"]}
+]}

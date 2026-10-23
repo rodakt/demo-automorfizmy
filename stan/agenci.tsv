@@ -2,3 +2,7 @@ iter01_planista	planista	01	1792740646	1792740752	0	0.455571	4	planowanie
 iter01_zad1	wykonawca	01	1792740753	1792740828	0	0.32345519999999994	5	Dolne ograniczenia: stopień 1 i klasa 'afiniczne∘jedno trójkątne∘afiniczne' 
 iter01_zad2	wykonawca	01	1792740753	1792740884	0	0.45662899999999995	7	Stopień 4: rozstrzygnięcie złożeń dwóch trójkątnych stopnia 2 (Gröbner w Sage) 
 iter01_zad3	wykonawca	01	1792740753	1792740884	0	0.3842222	7	Konstrukcja: szybkie rozwiązanie stopnia istotnie poniżej 16 (cel 6–9) 
+iter02_planista	planista	02	1792740893	1792740978	0	0.4133264	5	planowanie 
+iter02_zad1	wykonawca	02	1792740978	1792741097	0	0.47632399999999997	6	Dowód ograniczenia dolnego deg ≥ 6: redukcja przez Junga–van der Kulka do K1 ∪ K2 
+iter02_zad2	wykonawca	02	1792740978	1792741430	0	0.6391776	16	Niezależne potwierdzenie braku wymiernych złożeń dwóch trójkątnych stopnia 2 
+iter02_zad3	wykonawca	02	1792740978	1792741430	0	0.4849072	8	Test sensowności: jawne rzeczywiste automorfizmy stopnia 4 nad Q(√94) 
