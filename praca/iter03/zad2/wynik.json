@@ -1,0 +1,9 @@
+{"status": "bez_rozstrzygniecia",
+ "podsumowanie": "Napisano pełny, samodzielny dowód Tw. B (deg słowa zredukowanego = iloczyn deg j_i) nad dowolnym ciałem, przez indukcję malejącą z tezą: pierwsza składowa ma stopień d_m, druga ściśle mniejszy; jedynym miejscem użycia a_i ∉ J jest λ ≠ 0 w drugiej współrzędnej a_i. Wyprowadzono deg F ≤ 5 ⇒ k ≤ 2, a k = 2 ⇒ stopnie (2,2), deg F = 4. Kontrola sympy na 53 losowych słowach zgodna; przykłady niezredukowane pokazują spadek stopnia. Argument K1 z iter02/zad1 oceniono jako poprawny. Zadanie nie dotyczyło nowych rozwiązań.",
+ "najlepszy_stopien": null,
+ "twierdzenia": [
+  {"tresc": "Tw. B: dla słowa zredukowanego F = a0∘j1∘a1∘…∘jk∘ak (j_i ∈ J∖A, a_i ∈ A∖J dla 0<i<k) nad dowolnym ciałem deg F = ∏ deg j_i.", "etykieta": "UDOWODNIONE", "uzasadnienie": "Pełny dowód indukcyjny w notatki.md §1; używa tylko tego, że k[x,y] jest dziedziną.", "pliki": ["notatki.md"]},
+  {"tresc": "Jeśli F ∉ A, deg F ≤ 5, to długość słowa zredukowanego k ≤ 2, a przy k = 2 deg j1 = deg j2 = 2 i deg F = 4.", "etykieta": "UDOWODNIONE", "uzasadnienie": "Z Tw. B i deg j_i ≥ 2 (istnienie słowa zredukowanego z cytowanego Tw. Junga–van der Kulka); notatki.md §2.", "pliki": ["notatki.md"]},
+  {"tresc": "Dla 53 losowych słów zredukowanych nad Q o stopniach (2,2),(2,3),(3,2),(2,2,2) deg F = iloczyn; dla słów z a1 = id ∈ J stopień spada (np. 1 zamiast 4, 3 zamiast 6).", "etykieta": "OBLICZENIOWE", "uzasadnienie": "Dokładny rachunek sympy, seed 2026, wynik tmp/kontrola.out.", "pliki": ["skrypty/kontrola.py"]},
+  {"tresc": "Rozumowanie lematu K1 z iter02/zad1 (F ∈ K1 ⇒ niestałe afiniczne L, L' z L'(q_i) = L(p_i)) jest poprawne, także nad dowolnym rozszerzeniem Q.", "etykieta": "UDOWODNIONE", "uzasadnienie": "notatki.md §4: pierwsza współrzędna (x, y+f(x))∘b to b_1; rachunek rzędu nie był powtarzany.", "pliki": ["notatki.md"]}
+ ]}

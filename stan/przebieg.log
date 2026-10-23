@@ -27,3 +27,15 @@ Zaakceptowane: 2, odrzucone: 0, najlepszy stopień: 6
 [09:43:50] == iteracja 02: weryfikacja
 Zaakceptowane: 2, odrzucone: 0, najlepszy stopień: 6
 [09:43:51] najlepszy zweryfikowany stopień: 6
+[09:44:00] == iteracja 03: planowanie
+[09:45:39] agent iter03_planista zakończony (kod 0, koszt 0.5956956 USD)
+[09:45:39] == iteracja 03: 3 wykonawców po 12 min
+[09:45:39] start iter03_zad1: Sprawdzalny certyfikat braku wymiernych F ∈ K2 + dowód kompletności kart cechowania
+[09:45:39] start iter03_zad2: Samodzielny dowód: stopień słowa zredukowanego = iloczyn stopni (nad dowolnym ciałem)
+[09:45:39] start iter03_zad3: Wynik poboczny: nad R najniższy stopień tej bijekcji wynosi dokładnie 4 (dowód)
+[09:54:38] agent iter03_zad1 zakończony (kod 0, koszt 0.5972197999999999 USD)
+[09:54:38] agent iter03_zad2 zakończony (kod 0, koszt 0.47971400000000003 USD)
+[09:54:38] agent iter03_zad3 zakończony (kod 0, koszt 0.6009405999999999 USD)
+[09:54:38] == iteracja 03: weryfikacja
+Zaakceptowane: 2, odrzucone: 0, najlepszy stopień: 6
+[09:54:39] najlepszy zweryfikowany stopień: 6
